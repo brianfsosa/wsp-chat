@@ -3,19 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+ 
+}
+body {
+  background-image: url('./assets/img/wallpaper.jpg');
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -26,11 +19,7 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+
 
 .card {
   padding: 2em;
@@ -38,4 +27,35 @@
 
 .read-the-docs {
   color: #888;
+}
+.title {
+  color: #00A884;
+}
+
+.select{
+  width:250px;
+    font-size:16px;
+    padding:14px;
+    border-radius:10px;
+    margin: 8px;
+}
+
+.input {
+    width:250;
+    font-size:16px;
+    padding:14px;
+    border-radius:10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.label {
+  margin-top:1px
+}
+
+.button {
+  background-color: #00A884;
+}
+
+.button:hover {
+  color: white;
 }

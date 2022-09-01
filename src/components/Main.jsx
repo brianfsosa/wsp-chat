@@ -1473,13 +1473,12 @@ function Main() {
   console.log(selection)
   return (
     <>
-    <h1>Envia whatsapp sin agendar el contacto</h1>
+    <h1 className='title'>Envia whatsapp sin agendar el contacto</h1>
 
-    <form 
+    <form className='form'
       onSubmit={handleSubmit}
     >
-      <label htmlFor="number">País</label>
-      <select name="" id="number"
+      <select name="" id="number" className='select'
             onChange={e => setCountry(e.target.value)}
           >
               <option value=''>Seleccione País</option>
@@ -1487,14 +1486,16 @@ function Main() {
               return <option key={c.code}value={c.dial_code}>{c.name_es}({c.dial_code})</option>
         })}
       </select>
-
-      <label htmlFor="">{country}</label>
       <input type="number" 
+              className='input'
             placeholder='Número...' 
             onChange={e => setSelection(e.target.value)}
       />
-      <button type='submit'>Enviar</button>
-      <p>Número sin 0 y sin 15</p>
+      <p className='label'>Número sin 0 y sin 15</p>
+      <button type='submit' className='button'
+        >Enviar
+      </button>
+      
     </form>
     </>
   )
