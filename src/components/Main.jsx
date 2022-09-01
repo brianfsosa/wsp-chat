@@ -1462,12 +1462,15 @@ function Main() {
   const handleSubmit = e => {
     e.preventDefault()
 
-    if(country){
-    const theNumber = 'https://wa.me/'+country + selection
-    console.log(theNumber)
-    window.location.href = theNumber
-    }else
-    {alert('error')}
+    if(!country){
+      {alert('Por Favor ingrese el país y número')}
+    }else if(!selection)
+      {alert('Por Favor ingrese el país y número')}
+    else {
+      const theNumber = 'https://wa.me/'+country + selection
+      console.log(theNumber)
+      window.location.href = theNumber
+    }
 }
   
   console.log(selection)
