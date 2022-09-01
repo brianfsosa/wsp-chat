@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Error from './Error'
 
 function Main() {
 
@@ -1458,15 +1459,17 @@ function Main() {
       "code": "AX"
     }
   ] 
+  const [error, setError] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault()
 
     if(!country){
-      {alert('Por Favor ingrese el país y número')}
+      setError(true)
     }else if(!selection)
-      {alert('Por Favor ingrese el país y número')}
+      setError(true)
     else {
+      setError(false)
       const theNumber = 'https://wa.me/'+country + selection
       console.log(theNumber)
       window.location.href = theNumber
@@ -1476,11 +1479,12 @@ function Main() {
   console.log(selection)
   return (
     <>
-    <h1 className='title'>Envia whatsapp sin agendar el contacto</h1>
+    <h1 className='title'>Envía Whatsapp sin agendar el contacto</h1>
 
     <form className='form'
       onSubmit={handleSubmit}
     >
+      {error && <Error>Por Favor ingrese el país y número de teléfono</Error> }
       <select name="" id="number" className='select'
             onChange={e => setCountry(e.target.value)}
           >
